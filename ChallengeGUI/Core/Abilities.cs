@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChallengeGUI
+namespace ChallengeGUI.Core
 {
-    public class Class1
+    class Abilities
     {
     }
 }
