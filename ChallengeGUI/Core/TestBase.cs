@@ -13,7 +13,9 @@ namespace ChallengeGUI.Core
     public abstract class TestBase
     {
         public LoginPage loginPage;
-        public ProductsPage productsPage;
+        public ProductPage productsPage;
+        public CartPage cartPage;
+        public CheckoutPage checkoutPage;
 
         [SetUp]
         public void SetUp()
@@ -21,7 +23,9 @@ namespace ChallengeGUI.Core
             Driver.StartBrowser();
 
             loginPage = new LoginPage();
-            productsPage = new ProductsPage();
+            productsPage = new ProductPage();
+            cartPage = new CartPage();
+            checkoutPage = new CheckoutPage();
         }
 
         [TearDown]

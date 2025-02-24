@@ -87,6 +87,8 @@ namespace ChallengeGUI.Core
             options.SetLoggingPreference(LogType.Browser, LogLevel.Warning);
 
             Browser = new ChromeDriver(options);
+
+            Browser.Manage().Window.Maximize();
         }
 
         private static void InitializeFireFoxDriver()

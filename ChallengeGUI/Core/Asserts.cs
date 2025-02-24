@@ -19,6 +19,13 @@ namespace ChallengeGUI.Core
             Assert.That(element.Displayed, $"The following element isnt visible: {locatorName}");
         }
 
+        public static void AssertElementsVisible(By locator, string locatorName)
+        {
+            Driver.ShortWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(locator));
+            IWebElement element = Driver.Browser.FindElement(locator);
+            Assert.That(element.Displayed, $"The following element isnt visible: {locatorName}");
+        }
+
         public static void AssertElementText(By locator, string text)
         {
             Driver.ShortWait.Until(ExpectedConditions.ElementIsVisible(locator));

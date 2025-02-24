@@ -126,26 +126,35 @@
     <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Selenium.WebDriver.4.29.0\lib\netstandard2.0\WebDriver.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.4.29.0\lib\netstandard2.0\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Abilities.cs" />
     <Compile Include="Core\Asserts.cs" />
     <Compile Include="Core\Driver.cs" />
     <Compile Include="Core\TestBase.cs" />
+    <Compile Include="Pages\CheckoutPage\CheckoutPage.Asserter.cs" />
+    <Compile Include="Pages\CheckoutPage\CheckoutPage.cs" />
+    <Compile Include="Pages\CheckoutPage\CheckoutPage.Map.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.Asserter.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.Map.cs" />
+    <Compile Include="Pages\CartPage\CartPage.Asserter.cs" />
+    <Compile Include="Pages\CartPage\CartPage.cs" />
+    <Compile Include="Pages\CartPage\CartPage.Map.cs" />
     <Compile Include="Pages\ProductsPage\ProductsPage.Asserter.cs" />
     <Compile Include="Pages\ProductsPage\ProductsPage.cs" />
     <Compile Include="Pages\ProductsPage\ProductsPage.Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestSettings.cs" />
-    <Compile Include="Tests\AddCart.cs" />
-    <Compile Include="Tests\Checkout.cs" />
-    <Compile Include="Tests\Login.cs" />
-    <Compile Include="Tests\Logout.cs" />
-    <Compile Include="Tests\RemoveCart.cs" />
-    <Compile Include="Tests\Sort.cs" />
+    <Compile Include="Tests\2_AddCart.cs" />
+    <Compile Include="Tests\4_Checkout.cs" />
+    <Compile Include="Tests\1_Login.cs" />
+    <Compile Include="Tests\6_Logout.cs" />
+    <Compile Include="Tests\3_RemoveCart.cs" />
+    <Compile Include="Tests\5_Sort.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

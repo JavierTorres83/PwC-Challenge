@@ -12,8 +12,7 @@ namespace ChallengeGUI.Tests
         public void Login_01()
         {
             loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
-            
+            productsPage.AssertPageLoadedCorrectly();   
         }
 
         [Description("Login with invalid User")]

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Tests
 {
+    [TestFixture]
     public class Logout : TestBase
     {
         [Description("Logout")]
