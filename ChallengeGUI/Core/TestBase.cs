@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using ChallengeGUI.Pages;
+using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,19 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Core
 {
+    [TestFixture]
     public abstract class TestBase
     {
+        public LoginPage loginPage;
+        public ProductsPage productsPage;
+
         [SetUp]
         public void SetUp()
         {
-            TestSettings.SetUpSettings();
             Driver.StartBrowser();
+
+            loginPage = new LoginPage();
+            productsPage = new ProductsPage();
         }
 
         [TearDown]
