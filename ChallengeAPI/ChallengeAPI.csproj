@@ -137,6 +137,7 @@
     <Compile Include="Tests\2_BookingTest.cs" />
     <Compile Include="Tests\3_UpdateTest.cs" />
     <Compile Include="Tests\4_DeleteTest.cs" />
+    <Compile Include="Tests\5_PartialUpdateTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
