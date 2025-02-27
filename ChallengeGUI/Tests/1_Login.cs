@@ -12,6 +12,7 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Login_01()
         {
+            // LoginPAge loginPage = new LoginPage(); other alternative but singleton is cleaner. for endurance test, this may be better.
             LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
             ProductPage.Instance.AssertPageLoadedCorrectly();   
         }
