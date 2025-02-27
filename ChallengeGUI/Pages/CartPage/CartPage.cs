@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Pages
 {
-    public partial class CartPage
+    public partial class CartPage : WebPage<CartPage>
     {
         public CartPage RemoveFromCartItemByPos(string pos)
         {

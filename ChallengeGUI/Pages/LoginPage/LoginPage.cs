@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Pages
 {
-    public partial class LoginPage
+    public partial class LoginPage : WebPage<LoginPage>
     {
         public void LoginToSauceDemoWith(string user)
         {

@@ -19,10 +19,10 @@ namespace ChallengeGUI.Tests
         {
             var sortType = "Price (low to high)";
 
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.SortBy(sortType).AssertSortType(sortType);
+            ProductPage.Instance.SortBy(sortType).AssertSortType(sortType);
         }
     }
 }

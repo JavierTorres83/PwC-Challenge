@@ -1,4 +1,5 @@
 ﻿using ChallengeGUI.Core;
+using ChallengeGUI.Pages;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Logout_01()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.Logout();
-            loginPage.AssertPageLoadedCorrectly();
+            ProductPage.Instance.Logout();
+            LoginPage.Instance.AssertPageLoadedCorrectly();
         }
     }
 }

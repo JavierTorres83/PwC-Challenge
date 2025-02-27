@@ -17,27 +17,27 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Checkout_01()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.AddToCartItemByPos("1").AssertCartNumber("1");
-            productsPage.AddToCartItemByPos("2").AssertCartNumber("2");
+            ProductPage.Instance.AddToCartItemByPos("1").AssertCartNumber("1");
+            ProductPage.Instance.AddToCartItemByPos("2").AssertCartNumber("2");
 
-            productsPage.GoToCart();
-            cartPage.AssertPageLoadedCorrectly();
+            ProductPage.Instance.GoToCart();
+            CartPage.Instance.AssertPageLoadedCorrectly();
 
-            cartPage.Checkout();
-            checkoutPage.AssertPageLoadedCorrectly();
+            CartPage.Instance.Checkout();
+            CheckoutPage.Instance.AssertPageLoadedCorrectly();
 
-            checkoutPage.PopulateFirstName("John");
-            checkoutPage.PopulateLastName("Wick");
-            checkoutPage.PopulateZipCode("2301");
+            CheckoutPage.Instance.PopulateFirstName("John");
+            CheckoutPage.Instance.PopulateLastName("Wick");
+            CheckoutPage.Instance.PopulateZipCode("2301");
 
-            checkoutPage.Continue();
+            CheckoutPage.Instance.Continue();
 
-            checkoutPage.AssertTotalPrice();
+            CheckoutPage.Instance.AssertTotalPrice();
 
-            checkoutPage.Finish().AssertConfirmationMessage();
+            CheckoutPage.Instance.Finish().AssertConfirmationMessage();
         }
 
         [Description("Checkout with Missing Details.")]
@@ -45,24 +45,24 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Checkout_02()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.AddToCartItemByPos("1").AssertCartNumber("1");
-            productsPage.AddToCartItemByPos("2").AssertCartNumber("2");
+            ProductPage.Instance.AddToCartItemByPos("1").AssertCartNumber("1");
+            ProductPage.Instance.AddToCartItemByPos("2").AssertCartNumber("2");
 
-            productsPage.GoToCart();
-            cartPage.AssertPageLoadedCorrectly();
+            ProductPage.Instance.GoToCart();
+            CartPage.Instance.AssertPageLoadedCorrectly();
 
-            cartPage.Checkout();
-            checkoutPage.AssertPageLoadedCorrectly();
+            CartPage.Instance.Checkout();
+            CheckoutPage.Instance.AssertPageLoadedCorrectly();
 
-            checkoutPage.PopulateFirstName("John");
-            checkoutPage.PopulateLastName("Wick");
+            CheckoutPage.Instance.PopulateFirstName("John");
+            CheckoutPage.Instance.PopulateLastName("Wick");
 
-            checkoutPage.Continue();
+            CheckoutPage.Instance.Continue();
 
-            checkoutPage.AssertErrorMessage();
+            CheckoutPage.Instance.AssertErrorMessage();
         }
     }
 }

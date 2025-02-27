@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Core
 {
-    public static class Abilities
+    public class Abilities
     {
         public static void SetText(By locator, string text)
         {

@@ -12,29 +12,10 @@ namespace ChallengeGUI.Core
     [TestFixture]
     public abstract class TestBase
     {
-        public LoginPage loginPage;
-        public ProductPage productsPage;
-        public CartPage cartPage;
-        public CheckoutPage checkoutPage;
-
         [SetUp]
-        public void SetUp()
-        {
-            Driver.StartBrowser();
-
-            loginPage = new LoginPage();
-            productsPage = new ProductPage();
-            cartPage = new CartPage();
-            checkoutPage = new CheckoutPage();
-        }
+        public void SetUp() => Driver.StartBrowser();
 
         [TearDown]
-        public void TearDown()
-        {
-            if(TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
-                Driver.TakeScreenshot(TestContext.CurrentContext);
-
-            Driver.StopBrowser();
-        }
+        public void TearDown() => Driver.StopBrowser();
     }
 }

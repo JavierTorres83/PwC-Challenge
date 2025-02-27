@@ -1,4 +1,5 @@
 ﻿using ChallengeGUI.Core;
+using ChallengeGUI.Pages;
 using NUnit.Framework;
 
 namespace ChallengeGUI.Tests
@@ -11,8 +12,8 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Login_01()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();   
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();   
         }
 
         [Description("Login with invalid User")]
@@ -20,8 +21,8 @@ namespace ChallengeGUI.Tests
         [Test]
         public void Login_02()
         {
-            loginPage.LoginToSauceDemoWith("Invalid User");
-            loginPage.AssertLoginErrorMessage();
+            LoginPage.Instance.LoginToSauceDemoWith("Invalid User");
+            LoginPage.Instance.AssertLoginErrorMessage();
         }
     }
 }

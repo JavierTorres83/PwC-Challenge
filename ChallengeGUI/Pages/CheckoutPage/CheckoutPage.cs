@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Pages
 {
-    public partial class CheckoutPage
+    public partial class CheckoutPage : WebPage<CheckoutPage>
     {
         public void PopulateFirstName(string firstName)
         {

@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -103,6 +104,9 @@ namespace ChallengeGUI.Core
 
         public static void StopBrowser()
         {
+            if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
+                TakeScreenshot(TestContext.CurrentContext);
+
             Browser.Quit();
             Browser.Dispose();
             Browser = null;

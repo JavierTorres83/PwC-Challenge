@@ -17,10 +17,10 @@ namespace ChallengeGUI.Tests
         [Test]
         public void AddCart_01()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.AddToCartItemByPos("1").AssertCartNumber("1");
+            ProductPage.Instance.AddToCartItemByPos("1").AssertCartNumber("1");
         }
 
         [Description("Add Multiple Product to Cart")]
@@ -28,12 +28,12 @@ namespace ChallengeGUI.Tests
         [Test]
         public void AddCart_02()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.AddToCartItemByPos("1").AssertCartNumber("1");
-            productsPage.AddToCartItemByPos("2").AssertCartNumber("2");
-            productsPage.AddToCartItemByPos("3").AssertCartNumber("3");
+            ProductPage.Instance.AddToCartItemByPos("1").AssertCartNumber("1");
+            ProductPage.Instance.AddToCartItemByPos("2").AssertCartNumber("2");
+            ProductPage.Instance.AddToCartItemByPos("3").AssertCartNumber("3");
         }
     }
 }

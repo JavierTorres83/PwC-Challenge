@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeGUI.Pages
 {
-    public partial class ProductPage
+    public partial class ProductPage : WebPage<ProductPage>
     {
         public void Logout()
         {

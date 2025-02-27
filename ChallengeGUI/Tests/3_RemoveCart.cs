@@ -1,4 +1,5 @@
 ﻿using ChallengeGUI.Core;
+using ChallengeGUI.Pages;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,18 +17,18 @@ namespace ChallengeGUI.Tests
         [Test]
         public void RemoveCart_01()
         {
-            loginPage.LoginToSauceDemoWith(TestSettings.StandardUser);
-            productsPage.AssertPageLoadedCorrectly();
+            LoginPage.Instance.LoginToSauceDemoWith(TestSettings.StandardUser);
+            ProductPage.Instance.AssertPageLoadedCorrectly();
 
-            productsPage.AddToCartItemByPos("1").AssertCartNumber("1");
-            productsPage.AddToCartItemByPos("2").AssertCartNumber("2");
+            ProductPage.Instance.AddToCartItemByPos("1").AssertCartNumber("1");
+            ProductPage.Instance.AddToCartItemByPos("2").AssertCartNumber("2");
 
-            productsPage.GoToCart();
+            ProductPage.Instance.GoToCart();
 
-            cartPage.AssertPageLoadedCorrectly();
+            CartPage.Instance.AssertPageLoadedCorrectly();
 
-            cartPage.RemoveFromCartItemByPos("1");
-            cartPage.AssertCartNumber("1");
+            CartPage.Instance.RemoveFromCartItemByPos("1");
+            CartPage.Instance.AssertCartNumber("1");
         }
     }
 }

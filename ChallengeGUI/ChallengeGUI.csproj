@@ -155,10 +155,11 @@
     <Compile Include="Tests\6_Logout.cs" />
     <Compile Include="Tests\3_RemoveCart.cs" />
     <Compile Include="Tests\5_Sort.cs" />
+    <Compile Include="WebPage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
